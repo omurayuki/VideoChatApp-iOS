@@ -54,6 +54,18 @@ final class VideoChatViewController: UIViewController {
 
 extension VideoChatViewController {
     
+    @objc func startCalling(_ sender: UIBarButtonItem) {
+        skyWayManager.getAccessPeerIds()
+    }
+    
+    @objc func endCalling(_ sender: UIBarButtonItem) {
+        showAlert(message: Resources.Strings.App.messageFinishCalling,
+                  actionTitle: Resources.Strings.General.yes,
+                  leftCompletion: nil) { [unowned self] in
+            self.skyWayManager.close()
+        }
+    }
+    
     private func setupNav() {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.topItem?.hidesBackButton = true
@@ -74,26 +86,6 @@ extension VideoChatViewController {
             }, restricted: {
                 showAlertWithRestrictedMicrophone()
             })
-    }
-    
-    @objc func startCalling(_ sender: UIBarButtonItem) {
-        guard let peer = skyWayManager.peer else {
-            Logger.debug("coult not salvage peer")
-            return
-        }
-        
-        showPeersDialog(peer) { [unowned self] peerId in
-            self.callManager.startCall(videoEnabled: true)
-            self.skyWayManager.connect(target: peerId)
-        }
-    }
-    
-    @objc func endCalling(_ sender: UIBarButtonItem) {
-        showAlert(message: Resources.Strings.App.messageFinishCalling,
-                  actionTitle: Resources.Strings.General.yes,
-                  leftCompletion: nil) { [unowned self] in
-            self.skyWayManager.close()
-        }
     }
 }
 
@@ -121,37 +113,23 @@ extension VideoChatViewController: SkyWayManagerDelegate {
         guard let call = callManager.calls.first else { return }
         callManager.end(call: call)
     }
+    
+    func didGetAccessPeerIds(_ peer: SKWPeer?, peerIds: [String]) {
+        guard let identity = peer?.identity else { return }
+        showListAlert(title: Resources.Strings.App.accessingPeerId,
+                      message: Resources.Strings.App.selectPeerId,
+                      list: peerIds,
+                      compared: identity)
+        { [unowned self] peerId in
+            self.callManager.startCall(videoEnabled: true)
+            self.skyWayManager.connect(target: peerId)
+        }
+    }
+    
+    func failedGetAccessPeerIds(_ peer: SKWPeer?) {
+        showCancelAlert(title: Resources.Strings.App.accessingPeerId,
+                        message: Resources.Strings.App.noPeerId)
+    }
 }
 
 extension VideoChatViewController: StoryboardInstantiable { }
-
-extension VideoChatViewController {
-    
-    func showPeersDialog(_ peer: SKWPeer, handler: @escaping (String) -> Void) {
-        peer.listAllPeers() { peers in
-            if let peerIds = peers as? [String] {
-                if peerIds.count <= 1 {
-                    let alert = UIAlertController(title: "接続中のPeerId", message: "接続先がありません", preferredStyle: .alert)
-                    let noAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
-                    alert.addAction(noAction)
-                    self.present(alert, animated: true, completion: nil)
-
-                }
-                else {
-                    let alert = UIAlertController(title: "接続中のPeerId", message: "接続先を選択してください", preferredStyle: .alert)
-                    for peerId in peerIds{
-                        if peerId != peer.identity {
-                            let peerIdAction = UIAlertAction(title: peerId, style: .default, handler: { (alert) in
-                                handler(peerId)
-                            })
-                            alert.addAction(peerIdAction)
-                        }
-                    }
-                    let noAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
-                    alert.addAction(noAction)
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
-    }
-}

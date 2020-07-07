@@ -20,6 +20,12 @@ struct StringResources {
             { return Internal.localizable.message_finish_calling() }
         static var unknown: String
             { return Internal.localizable.unknown() }
+        static var accessingPeerId: String
+            { return Internal.localizable.accessing_peer_id() }
+        static var selectPeerId: String
+            { return Internal.localizable.select_peer_id() }
+        static var noPeerId: String
+            { return Internal.localizable.no_peer_id() }
     }
     
     struct General {

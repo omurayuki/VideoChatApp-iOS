@@ -41,6 +41,11 @@ protocol SkyWayManagerDelegate: NSObject {
     ///   - peer: 自身のPeerオブジェクト
     ///   - peerIds: シグナリングサーバーに接続された全てのPeerオブジェクト
     func didGetAccessPeerIds(_ peer: SKWPeer?, peerIds: [String])
+    
+    /// PeerIdの配列を取得できなかった際に発火
+    /// - Parameters:
+    ///   - peer: 自身のPeerオブジェクト
+    func failedGetAccessPeerIds(_ peer: SKWPeer?)
 
     /// 自身のPeerの破棄(peer.destroy())が成功した際に発火
     func didDestroyPeer()

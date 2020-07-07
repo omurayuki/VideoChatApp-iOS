@@ -170,7 +170,7 @@ extension SkyWayManager {
             }
             peerIds.isEmpty ?
                 // エラーハンドリング 相手PeerIdの接続がない
-                () :
+                self?.delegate?.failedGetAccessPeerIds(self?.peer) :
                 self?.delegate?.didGetAccessPeerIds(self?.peer, peerIds: peerIds)
         }
     }

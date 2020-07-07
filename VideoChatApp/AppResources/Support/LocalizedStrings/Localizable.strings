@@ -7,6 +7,9 @@
 "end_call" = "通話終了";
 "message_finish_calling" = "通話を終了しますか？";
 "unknown" = "不明";
+"accessing_peer_id" = "接続中のPeerId";
+"select_peer_id" = "接続先を選択してください";
+"no_peer_id" = "接続先がありません";
  
 
 // General

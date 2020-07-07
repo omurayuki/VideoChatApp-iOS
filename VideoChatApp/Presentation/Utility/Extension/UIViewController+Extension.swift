@@ -31,6 +31,42 @@ extension UIViewController {
         self.present(alert, animated: true)
     }
     
+    func showListAlert(title: String,
+                       message: String,
+                       list: [String],
+                       compared: String,
+                       handler: @escaping (String) -> Void) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        list.forEach { element in
+            if element != compared {
+                let action = UIAlertAction(title: element,
+                                           style: .default,
+                                           handler: { _ in
+                                                handler(element)
+                })
+                alert.addAction(action)
+            }
+        }
+        let noAction = UIAlertAction(title: Resources.Strings.General.cancel,
+                                     style: .cancel,
+                                     handler: nil)
+        alert.addAction(noAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showCancelAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let noAction = UIAlertAction(title: Resources.Strings.General.cancel,
+                                     style: .cancel,
+                                     handler: nil)
+        alert.addAction(noAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func showError(message: String) {
         let alert = UIAlertController
             .createSimpleOkMessage(title: Resources.Strings.Error.displayTitle,
