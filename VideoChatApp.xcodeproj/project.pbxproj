@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD72024B413A30007C550 /* AppDelegate.swift */; };
-		C97FD72524B413A30007C550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD72424B413A30007C550 /* ViewController.swift */; };
-		C97FD72824B413A30007C550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72624B413A30007C550 /* Main.storyboard */; };
 		C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72924B413A50007C550 /* Assets.xcassets */; };
 		C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */; };
+		C97FD74024B418980007C550 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD73F24B418980007C550 /* Audio.swift */; };
+		C97FD74924B4190E0007C550 /* KeyboardNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD74824B4190E0007C550 /* KeyboardNotifier.swift */; };
+		C97FD74B24B4191F0007C550 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD74A24B4191F0007C550 /* TableViewDataSource.swift */; };
+		C97FD74D24B419340007C550 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD74C24B419340007C550 /* StoryboardInstantiable.swift */; };
+		C97FD74F24B419410007C550 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD74E24B419410007C550 /* Logger.swift */; };
+		C97FD75524B419750007C550 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD75424B419750007C550 /* Call.swift */; };
+		C97FD75724B419820007C550 /* CallProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD75624B419820007C550 /* CallProvider.swift */; };
+		C97FD75924B419930007C550 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD75824B419930007C550 /* CallManager.swift */; };
+		C97FD75B24B419BA0007C550 /* SkyWayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD75A24B419BA0007C550 /* SkyWayManager.swift */; };
+		C97FD75E24B419D10007C550 /* SkyWayManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD75D24B419D10007C550 /* SkyWayManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C97FD71D24B413A30007C550 /* VideoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97FD72024B413A30007C550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C97FD72424B413A30007C550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C97FD72724B413A30007C550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97FD72924B413A50007C550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C97FD72C24B413A50007C550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C97FD72E24B413A50007C550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97FD73F24B418980007C550 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		C97FD74824B4190E0007C550 /* KeyboardNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotifier.swift; sourceTree = "<group>"; };
+		C97FD74A24B4191F0007C550 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		C97FD74C24B419340007C550 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		C97FD74E24B419410007C550 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C97FD75424B419750007C550 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		C97FD75624B419820007C550 /* CallProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallProvider.swift; sourceTree = "<group>"; };
+		C97FD75824B419930007C550 /* CallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
+		C97FD75A24B419BA0007C550 /* SkyWayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyWayManager.swift; sourceTree = "<group>"; };
+		C97FD75D24B419D10007C550 /* SkyWayManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyWayManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +74,6 @@
 				C97FD73524B417490007C550 /* AppResources */,
 				C97FD73624B417520007C550 /* Presentation */,
 				C97FD73724B417590007C550 /* Data */,
-				C97FD72024B413A30007C550 /* AppDelegate.swift */,
-				C97FD72424B413A30007C550 /* ViewController.swift */,
-				C97FD72624B413A30007C550 /* Main.storyboard */,
-				C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */,
 			);
 			path = VideoChatApp;
 			sourceTree = "<group>";
@@ -85,6 +97,9 @@
 		C97FD73624B417520007C550 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C97FD73924B417FA0007C550 /* AppDelegate */,
+				C97FD73A24B418050007C550 /* Presentation-Domain */,
+				C97FD73D24B4184F0007C550 /* Utility */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -102,6 +117,159 @@
 				C97FD72E24B413A50007C550 /* Info.plist */,
 			);
 			path = InfoPlist;
+			sourceTree = "<group>";
+		};
+		C97FD73924B417FA0007C550 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD72024B413A30007C550 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C97FD73A24B418050007C550 /* Presentation-Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD73C24B418490007C550 /* Router */,
+				C97FD73B24B418140007C550 /* Launch */,
+			);
+			path = "Presentation-Domain";
+			sourceTree = "<group>";
+		};
+		C97FD73B24B418140007C550 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		C97FD73C24B418490007C550 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C97FD73D24B4184F0007C550 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD73E24B4188C0007C550 /* Class */,
+				C97FD74124B418BB0007C550 /* Manager */,
+				C97FD74724B418F40007C550 /* Service */,
+				C97FD74624B418E80007C550 /* DataSource */,
+				C97FD74524B418E20007C550 /* Protocol */,
+				C97FD74424B418DC0007C550 /* Log */,
+				C97FD74324B418D40007C550 /* AppUtil */,
+				C97FD74224B418CC0007C550 /* Extension */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C97FD73E24B4188C0007C550 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD73F24B418980007C550 /* Audio.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		C97FD74124B418BB0007C550 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75024B419510007C550 /* CallingManager */,
+				C97FD75124B419570007C550 /* SkyWayManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C97FD74224B418CC0007C550 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C97FD74324B418D40007C550 /* AppUtil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppUtil;
+			sourceTree = "<group>";
+		};
+		C97FD74424B418DC0007C550 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD74E24B419410007C550 /* Logger.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		C97FD74524B418E20007C550 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD74C24B419340007C550 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C97FD74624B418E80007C550 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD74A24B4191F0007C550 /* TableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C97FD74724B418F40007C550 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD74824B4190E0007C550 /* KeyboardNotifier.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C97FD75024B419510007C550 /* CallingManager */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75324B4196A0007C550 /* Value */,
+				C97FD75224B419670007C550 /* Provider */,
+				C97FD75824B419930007C550 /* CallManager.swift */,
+			);
+			path = CallingManager;
+			sourceTree = "<group>";
+		};
+		C97FD75124B419570007C550 /* SkyWayManager */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75C24B419C40007C550 /* Delegate */,
+				C97FD75A24B419BA0007C550 /* SkyWayManager.swift */,
+			);
+			path = SkyWayManager;
+			sourceTree = "<group>";
+		};
+		C97FD75224B419670007C550 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75624B419820007C550 /* CallProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		C97FD75324B4196A0007C550 /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75424B419750007C550 /* Call.swift */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
+		C97FD75C24B419C40007C550 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD75D24B419D10007C550 /* SkyWayManagerDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +332,6 @@
 			files = (
 				C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */,
 				C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */,
-				C97FD72824B413A30007C550 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +342,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97FD72524B413A30007C550 /* ViewController.swift in Sources */,
+				C97FD74024B418980007C550 /* Audio.swift in Sources */,
+				C97FD75B24B419BA0007C550 /* SkyWayManager.swift in Sources */,
+				C97FD74924B4190E0007C550 /* KeyboardNotifier.swift in Sources */,
+				C97FD74D24B419340007C550 /* StoryboardInstantiable.swift in Sources */,
+				C97FD74B24B4191F0007C550 /* TableViewDataSource.swift in Sources */,
+				C97FD75724B419820007C550 /* CallProvider.swift in Sources */,
+				C97FD74F24B419410007C550 /* Logger.swift in Sources */,
+				C97FD75924B419930007C550 /* CallManager.swift in Sources */,
+				C97FD75E24B419D10007C550 /* SkyWayManagerDelegate.swift in Sources */,
+				C97FD75524B419750007C550 /* Call.swift in Sources */,
 				C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,14 +359,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C97FD72624B413A30007C550 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C97FD72724B413A30007C550 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
