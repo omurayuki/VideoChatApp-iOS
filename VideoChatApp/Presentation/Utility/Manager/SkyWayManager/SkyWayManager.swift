@@ -16,11 +16,13 @@ class SkyWayManager {
 
     weak var delegate: SkyWayManagerDelegate?
 
-    func setupPeer(with id: String) {
+    func setupPeer(with id: String? = nil) {
         let options = SKWPeerOption()
         options.key = Config.App.currentSkyWayAPIKey
         options.domain = Config.App.currentSkyWayDomain
-        peer = SKWPeer(id: id, options: options)
+        id.isNone ?
+            (peer = SKWPeer(options: options)) :
+            (peer = SKWPeer(id: id, options: options))
     }
 
     func close() {

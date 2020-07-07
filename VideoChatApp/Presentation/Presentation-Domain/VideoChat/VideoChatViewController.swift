@@ -3,17 +3,7 @@ import UIKit
 import SkyWay
 import AVFoundation
 
-struct User {
-    
-    var peerId: String
-    var name: String
-}
-
 final class VideoChatViewController: UIViewController {
-    
-    // MARK: Dummy
-    var owned = User(peerId: "client-peer", name: "お客様")
-    var opponent = User(peerId: "admin-peer", name: "管理者")
     
     var routing: VideoChatRoutingProtocol?
     
@@ -48,13 +38,12 @@ final class VideoChatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNav()
-        print("fuga")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkPermissionAudio()
-        skyWayManager.setupPeer(with: owned.peerId)
+        skyWayManager.setupPeer()
         setupCallManager { [unowned self] in self.skyWayManager.call() }
     }
     
@@ -68,7 +57,8 @@ extension VideoChatViewController {
     private func setupNav() {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.topItem?.hidesBackButton = true
-        navigationController?.navigationBar.topItem?.rightBarButtonItems = [callingStartBtn ,callingEndBtn]
+        navigationController?.navigationBar.topItem?.rightBarButtonItems
+            = [callingStartBtn ,callingEndBtn]
         edgesForExtendedLayout = []
     }
     
@@ -93,7 +83,7 @@ extension VideoChatViewController {
         }
         
         showPeersDialog(peer) { [unowned self] peerId in
-            self.callManager.startCall(handle: self.owned.name, videoEnabled: true)
+            self.callManager.startCall(videoEnabled: true)
             self.skyWayManager.connect(target: peerId)
         }
     }
@@ -119,7 +109,6 @@ extension VideoChatViewController: SkyWayManagerDelegate {
 
     func didCallDataConnection(_ peer: SKWPeer?) {
         AppDelegate.shared.displayIncomingCall(uuid: UUID(),
-                                               handle: opponent.name,
                                                hasVideo: true,
                                                completion: nil)
     }
@@ -129,8 +118,8 @@ extension VideoChatViewController: SkyWayManagerDelegate {
     }
 
     func didCloseDataConnection(_ peer: SKWPeer?) {
-        callManager.end(call: callManager.calls[0])
-        routing?.pop(vc: self)
+        guard let call = callManager.calls.first else { return }
+        callManager.end(call: call)
     }
 }
 

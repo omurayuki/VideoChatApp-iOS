@@ -18,6 +18,8 @@ struct StringResources {
             { return Internal.localizable.end_call() }
         static var messageFinishCalling: String
             { return Internal.localizable.message_finish_calling() }
+        static var unknown: String
+            { return Internal.localizable.unknown() }
     }
     
     struct General {

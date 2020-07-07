@@ -55,8 +55,8 @@ class CallManager {
         requestTransaction(transaction)
     }
   
-    func startCall(handle: String, videoEnabled: Bool) {
-        let handle = CXHandle(type: .phoneNumber, value: handle)
+    func startCall(handle: String? = nil, videoEnabled: Bool) {
+        let handle = CXHandle(type: .phoneNumber, value: handle ?? Resources.Strings.App.unknown)
         let startCallAction = CXStartCallAction(call: UUID(), handle: handle)
         startCallAction.isVideo = videoEnabled
         let transaction = CXTransaction(action: startCallAction)

@@ -26,17 +26,19 @@ class CallProvider: NSObject {
     
     func reportIncomingCall(
         uuid: UUID,
-        handle: String,
+        handle: String?,
         hasVideo: Bool = false,
         completion: ((Error?) -> Void)?
     ) {
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: handle)
+        update.remoteHandle = CXHandle(type: .generic,
+                                       value: handle ?? Resources.Strings.App.unknown)
         update.hasVideo = hasVideo
     
         provider.reportNewIncomingCall(with: uuid, update: update) { error in
             if error.isNone {
-                let call = Call(uuid: uuid, handle: handle)
+                let call = Call(uuid: uuid,
+                                handle: handle ?? Resources.Strings.App.unknown)
                 self.callManager.add(call: call)
             }
             

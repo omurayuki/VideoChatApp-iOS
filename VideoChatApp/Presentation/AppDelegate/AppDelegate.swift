@@ -32,7 +32,7 @@ extension AppDelegate {
     
     func displayIncomingCall(
         uuid: UUID,
-        handle: String,
+        handle: String? = nil,
         hasVideo: Bool = false,
         completion: ((Error?) -> Void)?
     ) {

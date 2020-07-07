@@ -6,6 +6,7 @@
 "start_call" = "通話開始";
 "end_call" = "通話終了";
 "message_finish_calling" = "通話を終了しますか？";
+"unknown" = "不明";
  
 
 // General
