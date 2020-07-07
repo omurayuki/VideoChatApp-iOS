@@ -54,14 +54,54 @@
 		C97FD71F24B413A30007C550 /* VideoChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				C97FD73424B417400007C550 /* AppConfig */,
+				C97FD73524B417490007C550 /* AppResources */,
+				C97FD73624B417520007C550 /* Presentation */,
+				C97FD73724B417590007C550 /* Data */,
 				C97FD72024B413A30007C550 /* AppDelegate.swift */,
 				C97FD72424B413A30007C550 /* ViewController.swift */,
 				C97FD72624B413A30007C550 /* Main.storyboard */,
-				C97FD72924B413A50007C550 /* Assets.xcassets */,
 				C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */,
-				C97FD72E24B413A50007C550 /* Info.plist */,
 			);
 			path = VideoChatApp;
+			sourceTree = "<group>";
+		};
+		C97FD73424B417400007C550 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		C97FD73524B417490007C550 /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD72924B413A50007C550 /* Assets.xcassets */,
+				C97FD73824B417780007C550 /* InfoPlist */,
+			);
+			path = AppResources;
+			sourceTree = "<group>";
+		};
+		C97FD73624B417520007C550 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C97FD73724B417590007C550 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C97FD73824B417780007C550 /* InfoPlist */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD72E24B413A50007C550 /* Info.plist */,
+			);
+			path = InfoPlist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WF5Y5M59G;
-				INFOPLIST_FILE = VideoChatApp/Info.plist;
+				INFOPLIST_FILE = VideoChatApp/AppResources/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WF5Y5M59G;
-				INFOPLIST_FILE = VideoChatApp/Info.plist;
+				INFOPLIST_FILE = VideoChatApp/AppResources/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
