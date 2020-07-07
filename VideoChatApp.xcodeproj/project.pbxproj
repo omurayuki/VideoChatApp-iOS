@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96E53AF24B4C24700D5F5B8 /* SkyWayErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */; };
+		C96E53B224B4D5E600D5F5B8 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */; };
 		C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD72024B413A30007C550 /* AppDelegate.swift */; };
 		C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72924B413A50007C550 /* Assets.xcassets */; };
 		C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */; };
@@ -72,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyWayErrorHandler.swift; sourceTree = "<group>"; };
+		C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		C97FD71D24B413A30007C550 /* VideoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97FD72024B413A30007C550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C97FD72924B413A50007C550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +138,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C96E53AD24B4C22400D5F5B8 /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */,
+			);
+			path = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		C96E53B024B4D5D300D5F5B8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		C97FD71424B413A30007C550 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +267,7 @@
 		C97FD73D24B4184F0007C550 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C96E53B024B4D5D300D5F5B8 /* Error */,
 				C97FD73E24B4188C0007C550 /* Class */,
 				C97FD74124B418BB0007C550 /* Manager */,
 				C97FD74724B418F40007C550 /* Service */,
@@ -350,6 +371,7 @@
 		C97FD75124B419570007C550 /* SkyWayManager */ = {
 			isa = PBXGroup;
 			children = (
+				C96E53AD24B4C22400D5F5B8 /* ErrorHandler */,
 				C97FD75C24B419C40007C550 /* Delegate */,
 				C97FD75A24B419BA0007C550 /* SkyWayManager.swift */,
 			);
@@ -563,6 +585,7 @@
 				C97FD74D24B419340007C550 /* StoryboardInstantiable.swift in Sources */,
 				C97FD77224B41B370007C550 /* AVCaptureDevice+Extension.swift in Sources */,
 				C97FD79724B421E90007C550 /* UIViewController+Extension.swift in Sources */,
+				C96E53B224B4D5E600D5F5B8 /* ErrorHandler.swift in Sources */,
 				C97FD74B24B4191F0007C550 /* TableViewDataSource.swift in Sources */,
 				C97FD76C24B41A870007C550 /* Array+Util.swift in Sources */,
 				C97FD75724B419820007C550 /* CallProvider.swift in Sources */,
@@ -588,6 +611,7 @@
 				C97FD77424B41B4B0007C550 /* UINib+Extension.swift in Sources */,
 				C97FD76824B41A650007C550 /* DateFormatter+Util.swift in Sources */,
 				C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */,
+				C96E53AF24B4C24700D5F5B8 /* SkyWayErrorHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

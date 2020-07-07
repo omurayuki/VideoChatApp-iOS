@@ -1,13 +1,14 @@
 import Foundation
 import SkyWay
 
-class SkyWayManager {
+final class SkyWayManager {
 
+    private var skyWayErrorHandler: SkyWayErrorHandler?
     private var dataConnection: SKWDataConnection?
     private var mediaConnection: SKWMediaConnection?
     private var localStream: SKWMediaStream?
     private var remoteStream: SKWMediaStream?
-    private(set) var peer: SKWPeer? {
+    private var peer: SKWPeer? {
         didSet {
             setupPeerCallBacks()
             setupStream()
@@ -45,24 +46,23 @@ class SkyWayManager {
     func removeRemoteVideoRenderer(with remoteView: SKWVideo) {
         remoteStream?.removeVideoRenderer(remoteView, track: 0)
     }
+    
+    func destroyPeer() {
+        peer?.destroy()
+    }
 }
 
 // MARK: Peer Setup
 extension SkyWayManager {
 
     private func setupPeerCallBacks() {
-        peer?.on(.PEER_EVENT_ERROR) { obj in
-            if let error = obj as? SKWPeerError {
-                // TODO: エラーハンドリング
-                print("\(error)")
+        peer?.on(.PEER_EVENT_ERROR) { [weak self] obj in
+            self?.skyWayErrorHandler?.synthesizeApiError((obj as? SKWPeerError)) {
+                NotificationCenter.default.post(name: Notification.Name("fuga"), object: $0)
             }
         }
 
-        peer?.on(.PEER_EVENT_OPEN) { obj in
-            if (obj as? String).isEmpty {
-                // TODO: エラーハンドリング
-            }
-        }
+        peer?.on(.PEER_EVENT_OPEN) { obj in }
 
         peer?.on(.PEER_EVENT_CALL) { [weak self] obj in
             if let mc = obj as? SKWMediaConnection {
@@ -140,12 +140,14 @@ extension SkyWayManager {
                 mediaConnection = mc
                 setupMediaConnectionCallbacks(mediaConnection: mc)
             } else {
-                // エラーハンドリング
-                print("failed to call :\(peerId)")
+                skyWayErrorHandler?.synthesizeClientError(type: .call) {
+                    NotificationCenter.default.post(name: Notification.Name("call"), object: $0)
+                }
             }
         } else {
-            // エラーハンドリング
-            print("failed to get peerId from dataConnection")
+            skyWayErrorHandler?.synthesizeClientError(type: .dataConnect) {
+                NotificationCenter.default.post(name: Notification.Name("dataConnect"), object: $0)
+            }
         }
     }
 
@@ -157,8 +159,9 @@ extension SkyWayManager {
             setupDataConnectionCallbacks(dataConnection: dc)
             delegate?.didConnectWithTargetPeer(peer)
         } else {
-            // エラーハンドリング
-            print("failed to connect data connection")
+            skyWayErrorHandler?.synthesizeClientError(type: .listFetching) {
+                NotificationCenter.default.post(name: Notification.Name("listFetching"), object: $0)
+            }
         }
     }
 

@@ -48,7 +48,7 @@ final class VideoChatViewController: UIViewController {
     }
     
     deinit {
-        skyWayManager.peer?.destroy()
+        skyWayManager.destroyPeer()
     }
 }
 
