@@ -33,6 +33,7 @@
 		C97FD77424B41B4B0007C550 /* UINib+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77324B41B4B0007C550 /* UINib+Extension.swift */; };
 		C97FD77624B41B5C0007C550 /* Animation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77524B41B5C0007C550 /* Animation+Extension.swift */; };
 		C97FD77824B41B6F0007C550 /* NSLayoutAnchor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77724B41B6F0007C550 /* NSLayoutAnchor+Extension.swift */; };
+		C97FD77A24B41BBF0007C550 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77924B41BBF0007C550 /* AppConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		C97FD77324B41B4B0007C550 /* UINib+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Extension.swift"; sourceTree = "<group>"; };
 		C97FD77524B41B5C0007C550 /* Animation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extension.swift"; sourceTree = "<group>"; };
 		C97FD77724B41B6F0007C550 /* NSLayoutAnchor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extension.swift"; sourceTree = "<group>"; };
+		C97FD77924B41BBF0007C550 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		C97FD73424B417400007C550 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
+				C97FD77924B41BBF0007C550 /* AppConfigurator.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97FD74024B418980007C550 /* Audio.swift in Sources */,
+				C97FD77A24B41BBF0007C550 /* AppConfigurator.swift in Sources */,
 				C97FD77624B41B5C0007C550 /* Animation+Extension.swift in Sources */,
 				C97FD75B24B419BA0007C550 /* SkyWayManager.swift in Sources */,
 				C97FD77824B41B6F0007C550 /* NSLayoutAnchor+Extension.swift in Sources */,
