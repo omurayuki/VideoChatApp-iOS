@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C96E53AF24B4C24700D5F5B8 /* SkyWayErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */; };
 		C96E53B224B4D5E600D5F5B8 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */; };
+		C96E53B424B4D92A00D5F5B8 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96E53B324B4D92A00D5F5B8 /* Reachability.framework */; };
+		C96E53B524B4D92A00D5F5B8 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96E53B324B4D92A00D5F5B8 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C96E53B924B4D97000D5F5B8 /* ReachabilityObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53B824B4D97000D5F5B8 /* ReachabilityObserverDelegate.swift */; };
 		C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD72024B413A30007C550 /* AppDelegate.swift */; };
 		C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72924B413A50007C550 /* Assets.xcassets */; };
 		C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FD72B24B413A50007C550 /* LaunchScreen.storyboard */; };
@@ -66,6 +69,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C97FD7A024B429BD0007C550 /* SkyWay.framework in Embed Frameworks */,
+				C96E53B524B4D92A00D5F5B8 /* Reachability.framework in Embed Frameworks */,
 				C97FD79424B41F920007C550 /* Rswift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -76,6 +80,8 @@
 /* Begin PBXFileReference section */
 		C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyWayErrorHandler.swift; sourceTree = "<group>"; };
 		C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		C96E53B324B4D92A00D5F5B8 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		C96E53B824B4D97000D5F5B8 /* ReachabilityObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityObserverDelegate.swift; sourceTree = "<group>"; };
 		C97FD71D24B413A30007C550 /* VideoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97FD72024B413A30007C550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C97FD72924B413A50007C550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97FD79324B41F920007C550 /* Rswift.framework in Frameworks */,
+				C96E53B424B4D92A00D5F5B8 /* Reachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +159,14 @@
 				C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		C96E53B724B4D95500D5F5B8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C96E53B824B4D97000D5F5B8 /* ReachabilityObserverDelegate.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C97FD71424B413A30007C550 = {
@@ -267,6 +282,7 @@
 		C97FD73D24B4184F0007C550 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C96E53B724B4D95500D5F5B8 /* Network */,
 				C96E53B024B4D5D300D5F5B8 /* Error */,
 				C97FD73E24B4188C0007C550 /* Class */,
 				C97FD74124B418BB0007C550 /* Manager */,
@@ -451,6 +467,7 @@
 		C97FD79124B41F920007C550 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C96E53B324B4D92A00D5F5B8 /* Reachability.framework */,
 				C97FD79224B41F920007C550 /* Rswift.framework */,
 			);
 			name = Frameworks;
@@ -486,6 +503,7 @@
 				C97FD71A24B413A30007C550 /* Frameworks */,
 				C97FD71B24B413A30007C550 /* Resources */,
 				C97FD79524B41F920007C550 /* Embed Frameworks */,
+				C96E53B624B4D93000D5F5B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -544,6 +562,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C96E53B624B4D93000D5F5B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		C97FD78E24B41E8B0007C550 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96E53B924B4D97000D5F5B8 /* ReachabilityObserverDelegate.swift in Sources */,
 				C97FD74024B418980007C550 /* Audio.swift in Sources */,
 				C97FD77A24B41BBF0007C550 /* AppConfigurator.swift in Sources */,
 				C97FD77624B41B5C0007C550 /* Animation+Extension.swift in Sources */,

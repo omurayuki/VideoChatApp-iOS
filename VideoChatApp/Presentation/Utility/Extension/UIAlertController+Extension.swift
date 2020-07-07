@@ -84,8 +84,8 @@ extension UIAlertController {
     }
     
     class func createNetworkError() -> UIAlertController {
-        return createSimpleOkMessage(title: Resources.Strings.Error.displayTitle,
-                                     message: Resources.Strings.Error.noNetworkConnection,
+        return createSimpleOkMessage(title: Resources.Strings.Error.errorTitle,
+                                     message: Resources.Strings.Error.errorMessageNetwork,
                                      completion: nil)
     }
     

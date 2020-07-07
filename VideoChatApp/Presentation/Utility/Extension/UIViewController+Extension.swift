@@ -69,7 +69,7 @@ extension UIViewController {
     
     func showError(message: String) {
         let alert = UIAlertController
-            .createSimpleOkMessage(title: Resources.Strings.Error.displayTitle,
+            .createSimpleOkMessage(title: Resources.Strings.Error.errorTitle,
                                    message: message)
         present(alert, animated: true)
     }

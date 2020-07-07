@@ -38,6 +38,11 @@ final class VideoChatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNav()
+        do {
+            try addReachabilityObserver()
+        } catch {
+            Logger.debug("can't observe Reachiability.")
+        }
     }
     
     override func viewDidLoad() {
@@ -49,6 +54,7 @@ final class VideoChatViewController: UIViewController {
     
     deinit {
         skyWayManager.destroyPeer()
+        removeReachabilityObserver()
     }
 }
 
@@ -129,6 +135,17 @@ extension VideoChatViewController: SkyWayManagerDelegate {
     func failedGetAccessPeerIds(_ peer: SKWPeer?) {
         showCancelAlert(title: Resources.Strings.App.accessingPeerId,
                         message: Resources.Strings.App.noPeerId)
+    }
+}
+
+extension VideoChatViewController: ReachabilityObserverDelegate {
+    
+    func reachabilityChanged(_ isReachable: Bool) {
+        if !isReachable {
+            showAutomaticallyDisappearAlert(title: Resources.Strings.Error.errorTitle,
+                                            message: Resources.Strings.Error.errorMessageNetwork,
+                                            deadline: .now() + 1.5)
+        }
     }
 }
 

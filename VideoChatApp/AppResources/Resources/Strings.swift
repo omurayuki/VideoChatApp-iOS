@@ -54,9 +54,9 @@ struct StringResources {
     
     struct Error {
         
-        static var displayTitle: String
+        static var errorTitle: String
             { return Internal.localizable.error_title() }
-        static var noNetworkConnection: String
+        static var errorMessageNetwork: String
             { return Internal.localizable.error_message_network() }
     }
 }
