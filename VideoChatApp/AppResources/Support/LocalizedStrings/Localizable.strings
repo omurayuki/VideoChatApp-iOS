@@ -1,0 +1,25 @@
+// App
+"app_name" = "VideoChatApp";
+"video" = "ビデオ内線";
+"call" = "発信";
+"message_calling" = "発信しますか？";
+"start_call" = "通話開始";
+"end_call" = "通話終了";
+"message_finish_calling" = "通話を終了しますか？";
+ 
+
+// General
+"yes" = "はい";
+"no" = "いいえ";
+"ok" = "OK";
+"cancel" = "キャンセル";
+"attension" = "注意";
+"success" = "成功";
+"permission_microphone_title" = "マイクの許可";
+"permission_microphone_message" = "アプリの設定画面からマイクの使用を許可してください";
+"open_settings_title" = "設定を開く";
+"restreicted_microphone_message" = "マイクの使用が制限されています（通話することができません）";
+
+// エラー
+"error_title" = "エラー";
+"error_message_network" = "ネットワーク接続に失敗しました";

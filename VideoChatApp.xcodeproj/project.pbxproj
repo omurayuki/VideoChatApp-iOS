@@ -34,7 +34,35 @@
 		C97FD77624B41B5C0007C550 /* Animation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77524B41B5C0007C550 /* Animation+Extension.swift */; };
 		C97FD77824B41B6F0007C550 /* NSLayoutAnchor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77724B41B6F0007C550 /* NSLayoutAnchor+Extension.swift */; };
 		C97FD77A24B41BBF0007C550 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77924B41BBF0007C550 /* AppConfigurator.swift */; };
+		C97FD77C24B41C8D0007C550 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD77B24B41C8D0007C550 /* Config.swift */; };
+		C97FD78024B41CFE0007C550 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C97FD77F24B41CFE0007C550 /* Localizable.strings */; };
+		C97FD78524B41D600007C550 /* ResourceSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78424B41D600007C550 /* ResourceSupport.swift */; };
+		C97FD78724B41D920007C550 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78624B41D920007C550 /* Strings.swift */; };
+		C97FD78924B41DB10007C550 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78824B41DB10007C550 /* Sizes.swift */; };
+		C97FD78B24B41DBB0007C550 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78A24B41DBB0007C550 /* Images.swift */; };
+		C97FD78D24B41DCF0007C550 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78C24B41DCF0007C550 /* Resources.swift */; };
+		C97FD79024B41EC70007C550 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD78F24B41EC70007C550 /* R.generated.swift */; };
+		C97FD79324B41F920007C550 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FD79224B41F920007C550 /* Rswift.framework */; };
+		C97FD79424B41F920007C550 /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C97FD79224B41F920007C550 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C97FD79724B421E90007C550 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD79624B421E90007C550 /* UIViewController+Extension.swift */; };
+		C97FD79924B421FC0007C550 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD79824B421FC0007C550 /* UIAlertController+Extension.swift */; };
+		C97FD7A024B429BD0007C550 /* SkyWay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C97FD79E24B429B00007C550 /* SkyWay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C97FD79524B41F920007C550 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C97FD7A024B429BD0007C550 /* SkyWay.framework in Embed Frameworks */,
+				C97FD79424B41F920007C550 /* Rswift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C97FD71D24B413A30007C550 /* VideoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +94,18 @@
 		C97FD77524B41B5C0007C550 /* Animation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extension.swift"; sourceTree = "<group>"; };
 		C97FD77724B41B6F0007C550 /* NSLayoutAnchor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extension.swift"; sourceTree = "<group>"; };
 		C97FD77924B41BBF0007C550 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		C97FD77B24B41C8D0007C550 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C97FD77F24B41CFE0007C550 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C97FD78424B41D600007C550 /* ResourceSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceSupport.swift; sourceTree = "<group>"; };
+		C97FD78624B41D920007C550 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		C97FD78824B41DB10007C550 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		C97FD78A24B41DBB0007C550 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		C97FD78C24B41DCF0007C550 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		C97FD78F24B41EC70007C550 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = VideoChatApp/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C97FD79224B41F920007C550 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		C97FD79624B421E90007C550 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C97FD79824B421FC0007C550 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		C97FD79E24B429B00007C550 /* SkyWay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SkyWay.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97FD79324B41F920007C550 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,8 +123,10 @@
 		C97FD71424B413A30007C550 = {
 			isa = PBXGroup;
 			children = (
+				C97FD79E24B429B00007C550 /* SkyWay.framework */,
 				C97FD71F24B413A30007C550 /* VideoChatApp */,
 				C97FD71E24B413A30007C550 /* Products */,
+				C97FD79124B41F920007C550 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C97FD77924B41BBF0007C550 /* AppConfigurator.swift */,
+				C97FD77B24B41C8D0007C550 /* Config.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -117,8 +161,9 @@
 		C97FD73524B417490007C550 /* AppResources */ = {
 			isa = PBXGroup;
 			children = (
-				C97FD72924B413A50007C550 /* Assets.xcassets */,
-				C97FD73824B417780007C550 /* InfoPlist */,
+				C97FD77D24B41C9D0007C550 /* Support */,
+				C97FD78124B41D290007C550 /* R */,
+				C97FD78224B41D2D0007C550 /* Resources */,
 			);
 			path = AppResources;
 			sourceTree = "<group>";
@@ -215,6 +260,8 @@
 		C97FD74224B418CC0007C550 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C97FD79824B421FC0007C550 /* UIAlertController+Extension.swift */,
+				C97FD79624B421E90007C550 /* UIViewController+Extension.swift */,
 				C97FD77124B41B370007C550 /* AVCaptureDevice+Extension.swift */,
 				C97FD77324B41B4B0007C550 /* UINib+Extension.swift */,
 				C97FD77524B41B5C0007C550 /* Animation+Extension.swift */,
@@ -314,6 +361,60 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		C97FD77D24B41C9D0007C550 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD72924B413A50007C550 /* Assets.xcassets */,
+				C97FD73824B417780007C550 /* InfoPlist */,
+				C97FD77E24B41CC90007C550 /* LocalizedStrings */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C97FD77E24B41CC90007C550 /* LocalizedStrings */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD77F24B41CFE0007C550 /* Localizable.strings */,
+			);
+			path = LocalizedStrings;
+			sourceTree = "<group>";
+		};
+		C97FD78124B41D290007C550 /* R */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD78F24B41EC70007C550 /* R.generated.swift */,
+			);
+			path = R;
+			sourceTree = "<group>";
+		};
+		C97FD78224B41D2D0007C550 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD78324B41D550007C550 /* Support */,
+				C97FD78624B41D920007C550 /* Strings.swift */,
+				C97FD78824B41DB10007C550 /* Sizes.swift */,
+				C97FD78A24B41DBB0007C550 /* Images.swift */,
+				C97FD78C24B41DCF0007C550 /* Resources.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C97FD78324B41D550007C550 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD78424B41D600007C550 /* ResourceSupport.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C97FD79124B41F920007C550 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD79224B41F920007C550 /* Rswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,9 +422,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C97FD73124B413A50007C550 /* Build configuration list for PBXNativeTarget "VideoChatApp" */;
 			buildPhases = (
+				C97FD78E24B41E8B0007C550 /* ShellScript */,
 				C97FD71924B413A30007C550 /* Sources */,
 				C97FD71A24B413A30007C550 /* Frameworks */,
 				C97FD71B24B413A30007C550 /* Resources */,
+				C97FD79524B41F920007C550 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,11 +476,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */,
+				C97FD78024B41CFE0007C550 /* Localizable.strings in Resources */,
 				C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C97FD78E24B41E8B0007C550 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/$PROJECT_NAME/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"rswift\" generate \"$SRCROOT/$PROJECT_NAME/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C97FD71924B413A30007C550 /* Sources */ = {
@@ -390,9 +516,13 @@
 				C97FD75B24B419BA0007C550 /* SkyWayManager.swift in Sources */,
 				C97FD77824B41B6F0007C550 /* NSLayoutAnchor+Extension.swift in Sources */,
 				C97FD74924B4190E0007C550 /* KeyboardNotifier.swift in Sources */,
+				C97FD78924B41DB10007C550 /* Sizes.swift in Sources */,
+				C97FD78B24B41DBB0007C550 /* Images.swift in Sources */,
+				C97FD78724B41D920007C550 /* Strings.swift in Sources */,
 				C97FD77024B41ADB0007C550 /* Comparable+Util.swift in Sources */,
 				C97FD74D24B419340007C550 /* StoryboardInstantiable.swift in Sources */,
 				C97FD77224B41B370007C550 /* AVCaptureDevice+Extension.swift in Sources */,
+				C97FD79724B421E90007C550 /* UIViewController+Extension.swift in Sources */,
 				C97FD74B24B4191F0007C550 /* TableViewDataSource.swift in Sources */,
 				C97FD76C24B41A870007C550 /* Array+Util.swift in Sources */,
 				C97FD75724B419820007C550 /* CallProvider.swift in Sources */,
@@ -401,11 +531,16 @@
 				C97FD76A24B41A770007C550 /* NumberFormatter+Util.swift in Sources */,
 				C97FD76424B41A3C0007C550 /* Int+Util.swift in Sources */,
 				C97FD75924B419930007C550 /* CallManager.swift in Sources */,
+				C97FD78D24B41DCF0007C550 /* Resources.swift in Sources */,
 				C97FD76024B41A050007C550 /* Strings+Util.swift in Sources */,
 				C97FD76224B41A2D0007C550 /* Date+Util.swift in Sources */,
+				C97FD77C24B41C8D0007C550 /* Config.swift in Sources */,
 				C97FD76E24B41ABF0007C550 /* Optional+Util.swift in Sources */,
+				C97FD78524B41D600007C550 /* ResourceSupport.swift in Sources */,
 				C97FD75E24B419D10007C550 /* SkyWayManagerDelegate.swift in Sources */,
+				C97FD79024B41EC70007C550 /* R.generated.swift in Sources */,
 				C97FD75524B419750007C550 /* Call.swift in Sources */,
+				C97FD79924B421FC0007C550 /* UIAlertController+Extension.swift in Sources */,
 				C97FD77424B41B4B0007C550 /* UINib+Extension.swift in Sources */,
 				C97FD76824B41A650007C550 /* DateFormatter+Util.swift in Sources */,
 				C97FD72124B413A30007C550 /* AppDelegate.swift in Sources */,
@@ -546,7 +681,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WF5Y5M59G;
-				INFOPLIST_FILE = VideoChatApp/AppResources/InfoPlist/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VideoChatApp/AppResources/Support/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,7 +704,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WF5Y5M59G;
-				INFOPLIST_FILE = VideoChatApp/AppResources/InfoPlist/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = VideoChatApp/AppResources/Support/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

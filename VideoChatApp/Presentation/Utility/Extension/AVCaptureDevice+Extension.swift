@@ -3,7 +3,8 @@ import AVFoundation
 
 extension AVCaptureDevice {
     
-    static func checkPermissionAudio(denied: () -> Void, restricted: () -> Void) {
+    static func checkPermissionAudio(denied: () -> Void,
+                                     restricted: () -> Void) {
         switch AVCaptureDevice.authorizationStatus(for: .audio) {
         case .authorized:
             break
