@@ -51,6 +51,9 @@
 		C97FD7A524B42B110007C550 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD7A424B42B110007C550 /* Router.swift */; };
 		C97FD7A724B42B1D0007C550 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD7A624B42B1D0007C550 /* Route.swift */; };
 		C97FD7A924B42B3A0007C550 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD7A824B42B3A0007C550 /* Routing.swift */; };
+		C97FD7AC24B42BAE0007C550 /* VideoChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97FD7AB24B42BAE0007C550 /* VideoChatViewController.storyboard */; };
+		C97FD7AE24B42BB90007C550 /* VideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD7AD24B42BB90007C550 /* VideoChatViewController.swift */; };
+		C97FD7B024B42BC60007C550 /* VideoChatRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97FD7AF24B42BC60007C550 /* VideoChatRouting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +117,9 @@
 		C97FD7A424B42B110007C550 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C97FD7A624B42B1D0007C550 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C97FD7A824B42B3A0007C550 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		C97FD7AB24B42BAE0007C550 /* VideoChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoChatViewController.storyboard; sourceTree = "<group>"; };
+		C97FD7AD24B42BB90007C550 /* VideoChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoChatViewController.swift; sourceTree = "<group>"; };
+		C97FD7AF24B42BC60007C550 /* VideoChatRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoChatRouting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 			children = (
 				C97FD73C24B418490007C550 /* Router */,
 				C97FD73B24B418140007C550 /* Launch */,
+				C97FD7AA24B42B910007C550 /* VideoChat */,
 			);
 			path = "Presentation-Domain";
 			sourceTree = "<group>";
@@ -435,6 +442,16 @@
 			path = Convenience;
 			sourceTree = "<group>";
 		};
+		C97FD7AA24B42B910007C550 /* VideoChat */ = {
+			isa = PBXGroup;
+			children = (
+				C97FD7AB24B42BAE0007C550 /* VideoChatViewController.storyboard */,
+				C97FD7AD24B42BB90007C550 /* VideoChatViewController.swift */,
+				C97FD7AF24B42BC60007C550 /* VideoChatRouting.swift */,
+			);
+			path = VideoChat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +515,7 @@
 				C97FD72D24B413A50007C550 /* LaunchScreen.storyboard in Resources */,
 				C97FD78024B41CFE0007C550 /* Localizable.strings in Resources */,
 				C97FD72A24B413A50007C550 /* Assets.xcassets in Resources */,
+				C97FD7AC24B42BAE0007C550 /* VideoChatViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +571,8 @@
 				C97FD76A24B41A770007C550 /* NumberFormatter+Util.swift in Sources */,
 				C97FD76424B41A3C0007C550 /* Int+Util.swift in Sources */,
 				C97FD75924B419930007C550 /* CallManager.swift in Sources */,
+				C97FD7AE24B42BB90007C550 /* VideoChatViewController.swift in Sources */,
+				C97FD7B024B42BC60007C550 /* VideoChatRouting.swift in Sources */,
 				C97FD78D24B41DCF0007C550 /* Resources.swift in Sources */,
 				C97FD76024B41A050007C550 /* Strings+Util.swift in Sources */,
 				C97FD76224B41A2D0007C550 /* Date+Util.swift in Sources */,
@@ -717,6 +737,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.VideoChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKYWAY_API_KEY = "42f86ef7-7ff5-4aa6-9606-a790cd6f8456";
+				SKYWAY_DOMAIN = "mbp-3";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -740,6 +762,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.VideoChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKYWAY_API_KEY = "";
+				SKYWAY_DOMAIN = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

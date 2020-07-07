@@ -14,11 +14,11 @@ extension Resources {
 
         struct AppControllers {
             
-//            func entrance() -> LoginViewController {
-//                let vc = LoginViewController.instantiate()
-//                vc.routing = LoginRouting()
-//                return vc
-//            }
+            func videoChat() -> VideoChatViewController {
+                let vc = VideoChatViewController.instantiate()
+                vc.routing = VideoChatRouting()
+                return vc
+            }
         }
     }
 }

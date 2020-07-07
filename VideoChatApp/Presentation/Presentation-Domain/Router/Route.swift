@@ -2,15 +2,16 @@ import UIKit
 
 enum Route {
     
-    case entrance
+    case videoChat
     
     func viewController() -> UIViewController {
         
         let viewController: UIViewController
         
         switch self {
-        case .entrance:
-            viewController = Resources.ViewControllers.App.Login()
+        case .videoChat:
+            viewController = Resources.ViewControllers.App.videoChat()
+        }
         
         return viewController
     }

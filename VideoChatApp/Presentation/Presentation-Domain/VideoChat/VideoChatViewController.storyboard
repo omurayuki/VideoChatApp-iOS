@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Chat View Controller-->
+        <scene sceneID="6z7-Cw-VbC">
+            <objects>
+                <viewController id="gqA-PV-afv" customClass="VideoChatViewController" customModule="VideoChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="The-ep-74W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGg-JF-pc5" customClass="SKWVideo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5O-pE-zvw" customClass="SKWVideo">
+                                        <rect key="frame" x="279" y="39" width="111" height="196.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c5O-pE-zvw" secondAttribute="trailing" constant="24" id="26E-J7-sqo"/>
+                                    <constraint firstItem="c5O-pE-zvw" firstAttribute="top" secondItem="EGg-JF-pc5" secondAttribute="top" constant="39" id="nx5-G1-Ak8"/>
+                                    <constraint firstItem="c5O-pE-zvw" firstAttribute="height" secondItem="EGg-JF-pc5" secondAttribute="height" multiplier="0.219424" id="rcl-V0-bS1"/>
+                                    <constraint firstItem="c5O-pE-zvw" firstAttribute="width" secondItem="EGg-JF-pc5" secondAttribute="width" multiplier="0.267986" id="viu-5a-7lu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EGg-JF-pc5" secondAttribute="trailing" id="Fud-ym-v5X"/>
+                            <constraint firstAttribute="bottom" secondItem="EGg-JF-pc5" secondAttribute="bottom" id="TBJ-YA-I9G"/>
+                            <constraint firstItem="EGg-JF-pc5" firstAttribute="top" secondItem="The-ep-74W" secondAttribute="top" id="aDe-Pi-m5A"/>
+                            <constraint firstItem="EGg-JF-pc5" firstAttribute="leading" secondItem="The-ep-74W" secondAttribute="leading" id="uA9-4P-oxa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qik-pF-4hN"/>
+                    </view>
+                    <connections>
+                        <outlet property="localStreamView" destination="c5O-pE-zvw" id="GuV-sx-OCQ"/>
+                        <outlet property="remoteStreamView" destination="EGg-JF-pc5" id="oPz-c9-7Zk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzd-FK-69k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="72"/>
+        </scene>
+    </scenes>
+</document>
