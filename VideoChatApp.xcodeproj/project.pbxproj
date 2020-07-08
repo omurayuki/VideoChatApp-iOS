@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9129E0B24B57ACC00C350A7 /* Notification+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9129E0A24B57ACC00C350A7 /* Notification+Util.swift */; };
+		C9129E0E24B57D4200C350A7 /* Dictionary+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9129E0D24B57D4200C350A7 /* Dictionary+Util.swift */; };
 		C96E53AF24B4C24700D5F5B8 /* SkyWayErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */; };
 		C96E53B224B4D5E600D5F5B8 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */; };
 		C96E53B424B4D92A00D5F5B8 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96E53B324B4D92A00D5F5B8 /* Reachability.framework */; };
@@ -78,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C9129E0A24B57ACC00C350A7 /* Notification+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Util.swift"; sourceTree = "<group>"; };
+		C9129E0D24B57D4200C350A7 /* Dictionary+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Util.swift"; sourceTree = "<group>"; };
 		C96E53AE24B4C24700D5F5B8 /* SkyWayErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyWayErrorHandler.swift; sourceTree = "<group>"; };
 		C96E53B124B4D5E600D5F5B8 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		C96E53B324B4D92A00D5F5B8 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				C97FD76B24B41A870007C550 /* Array+Util.swift */,
 				C97FD76D24B41ABF0007C550 /* Optional+Util.swift */,
 				C97FD76F24B41ADB0007C550 /* Comparable+Util.swift */,
+				C9129E0A24B57ACC00C350A7 /* Notification+Util.swift */,
+				C9129E0D24B57D4200C350A7 /* Dictionary+Util.swift */,
 			);
 			path = AppUtil;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				C97FD77624B41B5C0007C550 /* Animation+Extension.swift in Sources */,
 				C97FD75B24B419BA0007C550 /* SkyWayManager.swift in Sources */,
 				C97FD7A924B42B3A0007C550 /* Routing.swift in Sources */,
+				C9129E0B24B57ACC00C350A7 /* Notification+Util.swift in Sources */,
 				C97FD7A524B42B110007C550 /* Router.swift in Sources */,
 				C97FD77824B41B6F0007C550 /* NSLayoutAnchor+Extension.swift in Sources */,
 				C97FD74924B4190E0007C550 /* KeyboardNotifier.swift in Sources */,
@@ -637,6 +644,7 @@
 				C97FD76024B41A050007C550 /* Strings+Util.swift in Sources */,
 				C97FD76224B41A2D0007C550 /* Date+Util.swift in Sources */,
 				C97FD77C24B41C8D0007C550 /* Config.swift in Sources */,
+				C9129E0E24B57D4200C350A7 /* Dictionary+Util.swift in Sources */,
 				C97FD7A324B42AEB0007C550 /* ViewController.swift in Sources */,
 				C97FD76E24B41ABF0007C550 /* Optional+Util.swift in Sources */,
 				C97FD78524B41D600007C550 /* ResourceSupport.swift in Sources */,

@@ -58,7 +58,8 @@ extension SkyWayManager {
     private func setupPeerCallBacks() {
         peer?.on(.PEER_EVENT_ERROR) { [weak self] obj in
             self?.skyWayErrorHandler?.synthesizeApiError((obj as? SKWPeerError)) {
-                NotificationCenter.default.post(name: Notification.Name("fuga"), object: $0)
+                let userInfo = [Keys.apiError.rawValue: $0] as [String: NSObject]
+                Notifications.didUpdate(notification: .updateSKWApiError, userInfo: userInfo)
             }
         }
 
@@ -141,12 +142,14 @@ extension SkyWayManager {
                 setupMediaConnectionCallbacks(mediaConnection: mc)
             } else {
                 skyWayErrorHandler?.synthesizeClientError(type: .call) {
-                    NotificationCenter.default.post(name: Notification.Name("call"), object: $0)
+                    let userInfo = [Keys.callError.rawValue: $0] as [String: NSObject]
+                    Notifications.didUpdate(notification: .callError, userInfo: userInfo)
                 }
             }
         } else {
             skyWayErrorHandler?.synthesizeClientError(type: .dataConnect) {
-                NotificationCenter.default.post(name: Notification.Name("dataConnect"), object: $0)
+                let userInfo = [Keys.dataConnectError.rawValue: $0] as [String: NSObject]
+                Notifications.didUpdate(notification: .dataConnectError, userInfo: userInfo)
             }
         }
     }
@@ -159,8 +162,9 @@ extension SkyWayManager {
             setupDataConnectionCallbacks(dataConnection: dc)
             delegate?.didConnectWithTargetPeer(peer)
         } else {
-            skyWayErrorHandler?.synthesizeClientError(type: .listFetching) {
-                NotificationCenter.default.post(name: Notification.Name("listFetching"), object: $0)
+            skyWayErrorHandler?.synthesizeClientError(type: .connectPeer) {
+                let userInfo = [Keys.connectPeerError.rawValue: $0] as [String: NSObject]
+                Notifications.didUpdate(notification: .connectPeerError, userInfo: userInfo)
             }
         }
     }
@@ -168,7 +172,10 @@ extension SkyWayManager {
     func getAccessPeerIds() {
         peer?.listAllPeers() { [weak self] lists in
             guard let peerIds = lists as? [String] else {
-                // エラーハンドリング
+                self?.skyWayErrorHandler?.synthesizeClientError(type: .listFetching) {
+                    let userInfo = [Keys.listFetchingError.rawValue: $0] as [String: NSObject]
+                    Notifications.didUpdate(notification: .listFetchingError, userInfo: userInfo)
+                }
                 return
             }
             peerIds.isEmpty ?

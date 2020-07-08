@@ -27,3 +27,10 @@
 // エラー
 "error_title" = "エラー";
 "error_message_network" = "ネットワーク接続に失敗しました";
+"error_message_network_retry_call" = "ネットワークが不安定です。もう一度おかけ直しください";
+"error_message_network_cutting" = "ネットワークが切断されました";
+"error_message_unknown" = "不明のエラー。お時間をおいておかけ直しください";
+"error_message_failed_calling" = "発信に失敗しました";
+"error_message_fetch_unique_data" = "識別データの取得に失敗しました";
+"error_message_connect" = "接続に失敗しました";
+"error_message_failed_fetching_list" = "リストの取得に失敗しました";
