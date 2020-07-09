@@ -140,16 +140,6 @@ extension SkyWayManager {
             if let mc = peer?.call(withId: peerId, stream: localStream, options: option) {
                 mediaConnection = mc
                 setupMediaConnectionCallbacks(mediaConnection: mc)
-            } else {
-                skyWayErrorHandler?.synthesizeClientError(type: .call) {
-                    let userInfo = [Keys.callError.rawValue: $0] as [String: NSObject]
-                    Notifications.didUpdate(notification: .callError, userInfo: userInfo)
-                }
-            }
-        } else {
-            skyWayErrorHandler?.synthesizeClientError(type: .dataConnect) {
-                let userInfo = [Keys.dataConnectError.rawValue: $0] as [String: NSObject]
-                Notifications.didUpdate(notification: .dataConnectError, userInfo: userInfo)
             }
         }
     }
@@ -161,23 +151,12 @@ extension SkyWayManager {
             dataConnection = dc
             setupDataConnectionCallbacks(dataConnection: dc)
             delegate?.didConnectWithTargetPeer(peer)
-        } else {
-            skyWayErrorHandler?.synthesizeClientError(type: .connectPeer) {
-                let userInfo = [Keys.connectPeerError.rawValue: $0] as [String: NSObject]
-                Notifications.didUpdate(notification: .connectPeerError, userInfo: userInfo)
-            }
         }
     }
 
     func getAccessPeerIds() {
         peer?.listAllPeers() { [weak self] lists in
-            guard let peerIds = lists as? [String] else {
-                self?.skyWayErrorHandler?.synthesizeClientError(type: .listFetching) {
-                    let userInfo = [Keys.listFetchingError.rawValue: $0] as [String: NSObject]
-                    Notifications.didUpdate(notification: .listFetchingError, userInfo: userInfo)
-                }
-                return
-            }
+            guard let peerIds = lists as? [String] else { return }
             peerIds.isEmpty ?
                 self?.delegate?.failedGetAccessPeerIds(self?.peer) :
                 self?.delegate?.didGetAccessPeerIds(self?.peer, peerIds: peerIds)

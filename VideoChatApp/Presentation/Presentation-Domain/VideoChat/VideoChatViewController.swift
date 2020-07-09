@@ -80,34 +80,6 @@ extension VideoChatViewController {
                                         deadline: .now() + 1.5)
     }
     
-    @objc func callError(_ notification: Notification) {
-        guard let message = notification.userInfo?[Keys.callError] as? String else { return }
-        showAutomaticallyDisappearAlert(title: Resources.Strings.Error.errorTitle,
-                                        message: message,
-                                        deadline: .now() + 1.5)
-    }
-    
-    @objc func dataConnectError(_ notification: Notification) {
-        guard let message = notification.userInfo?[Keys.dataConnectError] as? String else { return }
-        showAutomaticallyDisappearAlert(title: Resources.Strings.Error.errorTitle,
-                                        message: message,
-                                        deadline: .now() + 1.5)
-    }
-    
-    @objc func connectPeerError(_ notification: Notification) {
-        guard let message = notification.userInfo?[Keys.connectPeerError] as? String else { return }
-        showAutomaticallyDisappearAlert(title: Resources.Strings.Error.errorTitle,
-                                        message: message,
-                                        deadline: .now() + 1.5)
-    }
-    
-    @objc func listFetchingError(_ notification: Notification) {
-        guard let message = notification.userInfo?[Keys.listFetchingError] as? String else { return }
-        showAutomaticallyDisappearAlert(title: Resources.Strings.Error.errorTitle,
-                                        message: message,
-                                        deadline: .now() + 1.5)
-    }
-    
     private func setupNav() {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.topItem?.hidesBackButton = true
@@ -134,22 +106,6 @@ extension VideoChatViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(apiError(_:)),
                                                name: .updateSKWApiError,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(callError(_:)),
-                                               name: .callError,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(dataConnectError(_:)),
-                                               name: .dataConnectError,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(connectPeerError(_:)),
-                                               name: .connectPeerError,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(listFetchingError(_:)),
-                                               name: .listFetchingError,
                                                object: nil)
     }
 }
