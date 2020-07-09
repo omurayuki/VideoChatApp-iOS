@@ -58,7 +58,7 @@ extension SkyWayManager {
     private func setupPeerCallBacks() {
         peer?.on(.PEER_EVENT_ERROR) { [weak self] obj in
             self?.skyWayErrorHandler?.synthesizeApiError((obj as? SKWPeerError)) {
-                let userInfo = [Keys.apiError.rawValue: $0] as [String: NSObject]
+                let userInfo = [.apiError: $0] as [Keys: NSObject]
                 Notifications.didUpdate(notification: .updateSKWApiError, userInfo: userInfo)
             }
         }
